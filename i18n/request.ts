@@ -1,9 +1,12 @@
-import { getRequestConfig } from 'next-intl/server';
-import { locales, defaultLocale } from '@/constants/locale';
+import { getRequestConfig } from "next-intl/server";
+import { LOCALES, DEFAULT_LOCALE } from "@/constants/locale";
 
-export default getRequestConfig(async ({ locale }) => {
-  const isValidLocale = locales.includes(locale as any);
-  const safeLocale = isValidLocale ? (locale as string) : defaultLocale;
+export default getRequestConfig(async ({ requestLocale }) => {
+  let locale = await requestLocale;
+  const tags = LOCALES.map((item) => item.tag);
+
+  const isValidLocale = tags.includes(locale as any);
+  const safeLocale = isValidLocale ? (locale as string) : DEFAULT_LOCALE;
 
   try {
     const [landing] = await Promise.all([

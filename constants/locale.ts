@@ -1,4 +1,9 @@
-import { Locale } from '@/types/locale.type';
+export const LOCALES = [
+  { label: "English", tag: "en" },
+  {
+    label: "Français",
+    tag: "fr",
+  },
+];
 
-export const locales = ['en', 'fr'] as const;
-export const defaultLocale: Locale = 'en';
+export const DEFAULT_LOCALE = LOCALES[0].tag;

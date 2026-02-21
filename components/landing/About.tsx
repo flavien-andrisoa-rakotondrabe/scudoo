@@ -18,9 +18,9 @@ export default function About() {
             </p>
             <ul className="space-y-4">
               {[
-                'Vision à long terme',
-                'Expertise technologique pointue',
-                'Culture de l’excellence',
+                "Vision à long terme",
+                "Expertise technologique pointue",
+                "Culture de l’excellence",
               ].map((item, i) => (
                 <li
                   key={i}

@@ -1,1 +1,20 @@
-{}
+{
+  "navigation": {
+    "home": {
+      "label": "Acceuil",
+      "anchor": "#acceuil"
+    },
+    "vision": {
+      "label": "Vision",
+      "anchor": "#vision"
+    },
+    "ecosystem": {
+      "label": "Ecosystèmes",
+      "anchor": "#ecosysteme"
+    },
+    "careers": {
+      "label": "Carrières",
+      "anchor": "#carrieres"
+    }
+  }
+}

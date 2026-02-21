@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-            Propulser les plateformes{' '}
+            Propulser les plateformes{" "}
             <span className="text-blue-600 underline decoration-blue-200">
               de demain.
             </span>

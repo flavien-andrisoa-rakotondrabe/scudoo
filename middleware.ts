@@ -1,13 +1,9 @@
-import createMiddleware from 'next-intl/middleware';
+import createMiddleware from "next-intl/middleware";
 
-import { defaultLocale, locales } from '@/constants/locale';
+import { routing } from "./i18n/routing";
 
-export default createMiddleware({
-  locales: locales,
-  defaultLocale: defaultLocale,
-  localeDetection: true,
-});
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/(fr|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)'],
+  matcher: ["/", "/(fr|en)/:path*", "/((?!_next|_vercel|.*\\..*).*)"],
 };
