@@ -1,4 +1,12 @@
 {
+  "lang": "Langues",
+  "theme": {
+    "title": "Thème",
+    "dark": "Sombre",
+    "light": "Clair",
+    "system": "Système"
+  },
+  "joinUs": "Nous rejoindre",
   "navigation": {
     "home": {
       "label": "Acceuil",

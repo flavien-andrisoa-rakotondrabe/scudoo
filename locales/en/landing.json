@@ -1,4 +1,12 @@
 {
+  "lang": "Lang",
+  "theme": {
+    "title": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "joinUs": "Join Us",
   "navigation": {
     "home": {
       "label": "Home",

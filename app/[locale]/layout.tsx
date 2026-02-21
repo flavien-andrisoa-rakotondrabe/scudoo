@@ -1,5 +1,8 @@
 import "../globals.css";
 
+import ReduxProvider from "@/providers/ReduxProvider";
+import UtilsProvider from "@/providers/UtilsProvider";
+
 import { ReactNode } from "react";
 import { Bai_Jamjuree } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -32,7 +35,9 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${baiJamjuree.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ReduxProvider>
+            <UtilsProvider>{children}</UtilsProvider>
+          </ReduxProvider>
         </NextIntlClientProvider>
       </body>
     </html>

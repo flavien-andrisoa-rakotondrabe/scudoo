@@ -134,7 +134,3 @@
 body {
   font-family: var(--font-bai-jamjuree), ui-sans-serif, system-ui, sans-serif;
 }
-
-.bg-gradient {
-  background: linear-gradient(90deg, #3e090a, to #d11f22);
-}
