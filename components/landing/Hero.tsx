@@ -1,39 +1,154 @@
-export default function Hero() {
+import Image from "next/image";
+
+import { getLocale, getTranslations } from "next-intl/server";
+
+export default async function Hero() {
+  const t = await getTranslations("landing");
+  const locale = await getLocale();
+
   return (
-    <section className="relative overflow-hidden pt-20 pb-12 lg:pt-32 lg:pb-24">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-            Propulser les plateformes{" "}
-            <span className="text-blue-600 underline decoration-blue-200">
-              de demain.
-            </span>
-          </h1>
-          <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl">
-            SCUDOO Holding structure et développe des écosystèmes numériques
-            performants. Découvrez notre vision stratégique et rejoignez une
-            équipe qui redéfinit les standards de l'industrie.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#careers"
-              className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all text-center shadow-lg shadow-blue-200"
-            >
-              Voir les opportunités
-            </a>
-            <a
-              href="#about"
-              className="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all text-center"
-            >
-              En savoir plus
-            </a>
+    <section
+      id={t("navigation.home.anchor")}
+      className="relative min-h-[calc(100vh-9rem)] grid grid-rows-[1fr] py-36"
+    >
+      <div className="min-h-0">
+        <div className="h-full flex gap-8">
+          <div className="flex-1 h-full ps-20 flex flex-col gap-10">
+            <div className="flex-1 flex flex-col justify-center gap-10">
+              <h1 className="text-6xl font-semibold">
+                Bâtir l'infrastructure du{" "}
+                <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
+                  bien-être
+                </span>{" "}
+                connecté
+              </h1>
+              <p className="text-lg max-w-xl">
+                SCUDOO Holding déploie des écosystèmes numériques à fort impact,
+                unifiant fitness, santé et technologie. De la vision stratégique
+                à l’excellence opérationnelle, nous concevons les plateformes
+                qui redéfinissent les standards de l’industrie.
+              </p>
+              <a
+                href={`/locales/${locale}/plan.pdf`}
+                download
+                className="w-max flex items-center justify-center gap-2 px-10 py-3 text-white font-semibold text-xl rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90"
+              >
+                {"Découvrir notre plan"}
+              </a>
+            </div>
+
+            <div className="py-16">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="544"
+                height="58"
+                viewBox="0 0 544 58"
+                fill="none"
+              >
+                <line
+                  y1="52.5"
+                  x2="425"
+                  y2="52.5"
+                  stroke="url(#paint0_linear_14_89)"
+                />
+                <path
+                  d="M435 53C435 55.7614 432.761 58 430 58C427.239 58 425 55.7614 425 53C425 50.2386 427.239 48 430 48C432.761 48 435 50.2386 435 53Z"
+                  fill="url(#paint1_linear_14_89)"
+                />
+                <path
+                  d="M214.625 52.7119L262.5 4.5"
+                  stroke="url(#paint2_linear_14_89)"
+                />
+                <path
+                  d="M539 0.5C541.485 0.50001 543.5 2.51473 543.5 5C543.5 7.48527 541.485 9.49999 539 9.5C536.515 9.5 534.5 7.48528 534.5 5C534.5 2.51472 536.515 0.5 539 0.5Z"
+                  stroke="url(#paint3_linear_14_89)"
+                />
+                <path
+                  d="M262.5 4.50006H534.007"
+                  stroke="url(#paint4_linear_14_89)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14_89"
+                    x1="0"
+                    y1="53.5"
+                    x2="425"
+                    y2="53.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3E090A" />
+                    <stop offset="1" stop-color="#D11F22" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_14_89"
+                    x1="425"
+                    y1="53"
+                    x2="435"
+                    y2="53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#D11F22" />
+                    <stop offset="1" stop-color="#3E090A" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_14_89"
+                    x1="214.54"
+                    y1="52.6278"
+                    x2="262.584"
+                    y2="4.58414"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3E090A" />
+                    <stop offset="1" stop-color="#D11F22" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint3_linear_14_89"
+                    x1="534"
+                    y1="5"
+                    x2="544"
+                    y2="5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#3E090A" />
+                    <stop offset="1" stop-color="#D11F22" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint4_linear_14_89"
+                    x1="262.5"
+                    y1="5.00006"
+                    x2="534.007"
+                    y2="5.00006"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#D11F22" />
+                    <stop offset="1" stop-color="#3E090A" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div className="flex-1 flex justify-end">
+            <div className="relative w-150 h-150">
+              <Image
+                src="/hero.png"
+                alt="Hero"
+                width={600}
+                height={600}
+                className="w-full h-full"
+              />
+              <div className="w-[320px] h-42 absolute -bottom-21 right-12">
+                <Image
+                  src="/weight.png"
+                  alt="Weight"
+                  width={320}
+                  height={168}
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Petit élément décoratif en arrière-plan */}
-      <div className="absolute top-0 right-0 -z-10 opacity-10 translate-x-1/4 -translate-y-1/4">
-        <div className="w-[600px] h-[600px] rounded-full bg-blue-600 blur-[120px]"></div>
       </div>
     </section>
   );

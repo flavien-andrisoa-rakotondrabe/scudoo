@@ -10,19 +10,19 @@
   "navigation": {
     "home": {
       "label": "Acceuil",
-      "anchor": "#acceuil"
+      "anchor": "acceuil"
     },
     "vision": {
       "label": "Vision",
-      "anchor": "#vision"
+      "anchor": "vision"
     },
     "ecosystem": {
-      "label": "Ecosystèmes",
-      "anchor": "#ecosysteme"
+      "label": "Ecosystème",
+      "anchor": "ecosysteme"
     },
     "careers": {
       "label": "Carrières",
-      "anchor": "#carrieres"
+      "anchor": "carrieres"
     }
   }
 }

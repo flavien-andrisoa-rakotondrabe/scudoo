@@ -1,14 +1,16 @@
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
-import { ComponentType } from "react";
+import { ComponentPropsWithoutRef, ComponentType, ElementType } from "react";
 
-interface ButtonProps {
+interface BaseProps {
   label: string;
-  className?: string;
-  href?: string;
-  onClick?: () => void;
-  icon?: ComponentType<{ className?: string }>;
+  icon?: ElementType;
+  isLoading?: boolean;
 }
+
+type ButtonProps = BaseProps &
+  ComponentPropsWithoutRef<"button"> &
+  ComponentPropsWithoutRef<"a">;
 
 export default function Button({
   label,
@@ -16,6 +18,7 @@ export default function Button({
   href,
   onClick,
   icon: Icon,
+  ...props
 }: ButtonProps) {
   const styles = cn(
     "flex items-center justify-center gap-2 px-8 py-2 text-white font-semibold rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90",
@@ -31,14 +34,14 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href as any} className={styles}>
+      <Link {...props} href={href as any} className={styles}>
         {content}
       </Link>
     );
   }
 
   return (
-    <button onClick={onClick} className={styles}>
+    <button {...props} onClick={onClick} className={styles}>
       {content}
     </button>
   );

@@ -125,12 +125,8 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
+  box-sizing: border-box;
   font-family: var(--font-bai-jamjuree), ui-sans-serif, system-ui, sans-serif;
+  scroll-behavior: smooth;
 }

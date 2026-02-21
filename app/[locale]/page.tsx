@@ -1,16 +1,16 @@
 import Hero from "@/components/landing/Hero";
-import About from "@/components/landing/About";
 import Strategy from "@/components/landing/Strategy";
 import Careers from "@/components/landing/Careers";
 import NavBar from "@/components/utils/NavBar";
+import Vision from "@/components/landing/Vision";
 
 export default function LandingPage() {
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen">
       <NavBar />
-      <main className="min-h-screen bg-white text-slate-900">
+      <main>
         <Hero />
-        <About />
+        <Vision />
         <Strategy />
         <Careers />
       </main>
