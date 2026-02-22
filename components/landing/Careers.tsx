@@ -1,29 +1,37 @@
-export default function Careers() {
+import Link from "next/link";
+
+import { getLocale, getTranslations } from "next-intl/server";
+
+export default async function Careers() {
+  const t = await getTranslations("landing");
+  const locale = await getLocale();
+
   return (
-    <section id="careers" className="py-20">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-4xl font-extrabold mb-6">
-            Façonnez l'avenir avec nous
-          </h2>
-          <p className="text-lg text-slate-600 mb-6">
-            SCUDOO Holding recherche des esprits innovants. Nous valorisons
-            l'autonomie, la précision technique et l'audace créative.
+    <section
+      id={t("navigation.careers.anchor")}
+      className="relative px-20 py-36"
+    >
+      <div className="w-125 h-125 absolute top-0 right-0 bg-linear-to-l from-[#3e090a] to-[#d11f22] blur-[250px]"></div>
+
+      <div className="relative z-10 flex flex-col gap-8 justify-center items-center p-36 bg-linear-to-r from-[#3e090a] to-[#d11f22] rounded-[2rem]">
+        <h2 className="text-[3rem] font-semibold text-white">
+          Rejoignez l’équipe SCUDOO
+        </h2>
+        <p className="max-w-xl text-center text-white">
+          Nous recherchons des bâtisseurs capables de concevoir des systèmes
+          évolutifs, sécurisés et performants.
+        </p>
+        <Link
+          href="/join-us"
+          className="w-max px-10 py-3 font-semibold text-xl rounded-full bg-white transition hover:opacity-90"
+        >
+          <p className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
+            Soumettre ma candidature
           </p>
-        </div>
-        <div className="bg-slate-900 text-white p-10 rounded-3xl shadow-2xl">
-          <h3 className="text-2xl font-bold mb-4 text-blue-400">
-            Test Créatif
-          </h3>
-          <p className="mb-6 opacity-80">
-            Démontrez votre savoir-faire en soumettant votre proposition
-            directement via notre portail de sélection.
-          </p>
-          <button className="w-full py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-blue-400 transition">
-            Démarrer le processus de sélection
-          </button>
-        </div>
+        </Link>
       </div>
+
+      <div className="w-125 h-125 absolute bottom-0 left-0 bg-linear-to-r from-[#d11f22] to-[#3e090a] blur-[200px]"></div>
     </section>
   );
 }

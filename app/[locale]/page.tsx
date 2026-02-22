@@ -1,8 +1,9 @@
-import Hero from "@/components/landing/Hero";
-import Strategy from "@/components/landing/Strategy";
-import Careers from "@/components/landing/Careers";
 import NavBar from "@/components/utils/NavBar";
+import Hero from "@/components/landing/Hero";
 import Vision from "@/components/landing/Vision";
+import Ecosystem from "@/components/landing/Ecosystem";
+import Careers from "@/components/landing/Careers";
+import Footer from "@/components/landing/Footer";
 
 export default function LandingPage() {
   return (
@@ -11,12 +12,10 @@ export default function LandingPage() {
       <main>
         <Hero />
         <Vision />
-        <Strategy />
+        <Ecosystem />
         <Careers />
       </main>
-      <footer className="py-10 border-t border-slate-100 text-center text-slate-400 text-sm">
-        © 2026 SCUDOO Holding. Tous droits réservés.
-      </footer>
+      <Footer />
     </div>
   );
 }

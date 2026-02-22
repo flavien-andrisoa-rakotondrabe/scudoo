@@ -7,17 +7,22 @@ import Theme from "@/components/utils/Theme";
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 import { HEADER_NAVIGATION } from "@/constants/navigation";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
-import { cn } from "@/lib/utils";
 
 export default function NavBar() {
   const t = useTranslations("landing");
   const scrollDirection = useScrollDirection();
 
+  const [isAtTop, setIsAtTop] = useState(true);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < 10);
+    };
+
     const anchors = HEADER_NAVIGATION.map((item) =>
       t(`navigation.${item}.anchor`),
     );
@@ -41,14 +46,19 @@ export default function NavBar() {
       if (element) observer.observe(element);
     });
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, [t]);
 
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full px-20 h-20 flex items-center justify-between bg-background shadow transition",
+        "fixed top-0 z-50 w-full px-20 h-20 flex items-center justify-between bg-background transition",
         scrollDirection === "down" ? "-translate-y-full" : "translate-y-0",
+        !isAtTop && "shadow",
       )}
     >
       <div className="flex items-center">
