@@ -76,8 +76,8 @@ export default async function Hero() {
                     y2="53.5"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#3E090A" />
-                    <stop offset="1" stop-color="#D11F22" />
+                    <stop stopColor="#3E090A" />
+                    <stop offset="1" stopColor="#D11F22" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_14_89"
@@ -87,8 +87,8 @@ export default async function Hero() {
                     y2="53"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#D11F22" />
-                    <stop offset="1" stop-color="#3E090A" />
+                    <stop stopColor="#D11F22" />
+                    <stop offset="1" stopColor="#3E090A" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear_14_89"
@@ -98,8 +98,8 @@ export default async function Hero() {
                     y2="4.58414"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#3E090A" />
-                    <stop offset="1" stop-color="#D11F22" />
+                    <stop stopColor="#3E090A" />
+                    <stop offset="1" stopColor="#D11F22" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_linear_14_89"
@@ -109,8 +109,8 @@ export default async function Hero() {
                     y2="5"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#3E090A" />
-                    <stop offset="1" stop-color="#D11F22" />
+                    <stop stopColor="#3E090A" />
+                    <stop offset="1" stopColor="#D11F22" />
                   </linearGradient>
                   <linearGradient
                     id="paint4_linear_14_89"
@@ -120,8 +120,8 @@ export default async function Hero() {
                     y2="5.00006"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#D11F22" />
-                    <stop offset="1" stop-color="#3E090A" />
+                    <stop stopColor="#D11F22" />
+                    <stop offset="1" stopColor="#3E090A" />
                   </linearGradient>
                 </defs>
               </svg>

@@ -81,8 +81,8 @@ export default async function Footer() {
               y2="21.5018"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_93_47"
@@ -92,8 +92,8 @@ export default async function Footer() {
               y2="20.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_93_47"
@@ -103,8 +103,8 @@ export default async function Footer() {
               y2="69.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3E090A" />
-              <stop offset="1" stop-color="#D11F22" />
+              <stop stopColor="#3E090A" />
+              <stop offset="1" stopColor="#D11F22" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_93_47"
@@ -114,8 +114,8 @@ export default async function Footer() {
               y2="69.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3E090A" />
-              <stop offset="1" stop-color="#D11F22" />
+              <stop stopColor="#3E090A" />
+              <stop offset="1" stopColor="#D11F22" />
             </linearGradient>
             <linearGradient
               id="paint4_linear_93_47"
@@ -125,8 +125,8 @@ export default async function Footer() {
               y2="20"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint5_linear_93_47"
@@ -136,8 +136,8 @@ export default async function Footer() {
               y2="69"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3E090A" />
-              <stop offset="1" stop-color="#D11F22" />
+              <stop stopColor="#3E090A" />
+              <stop offset="1" stopColor="#D11F22" />
             </linearGradient>
             <linearGradient
               id="paint6_linear_93_47"
@@ -147,8 +147,8 @@ export default async function Footer() {
               y2="69"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint7_linear_93_47"
@@ -158,8 +158,8 @@ export default async function Footer() {
               y2="20"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3E090A" />
-              <stop offset="1" stop-color="#D11F22" />
+              <stop stopColor="#3E090A" />
+              <stop offset="1" stopColor="#D11F22" />
             </linearGradient>
             <linearGradient
               id="paint8_linear_93_47"
@@ -169,8 +169,8 @@ export default async function Footer() {
               y2="50"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3E090A" />
-              <stop offset="1" stop-color="#D11F22" />
+              <stop stopColor="#3E090A" />
+              <stop offset="1" stopColor="#D11F22" />
             </linearGradient>
             <linearGradient
               id="paint9_linear_93_47"
@@ -180,8 +180,8 @@ export default async function Footer() {
               y2="70.1023"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint10_linear_93_47"
@@ -191,8 +191,8 @@ export default async function Footer() {
               y2="45.1023"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint11_linear_93_47"
@@ -202,8 +202,8 @@ export default async function Footer() {
               y2="45.3534"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
             <linearGradient
               id="paint12_linear_93_47"
@@ -213,8 +213,8 @@ export default async function Footer() {
               y2="20.3534"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D11F22" />
-              <stop offset="1" stop-color="#3E090A" />
+              <stop stopColor="#D11F22" />
+              <stop offset="1" stopColor="#3E090A" />
             </linearGradient>
           </defs>
         </svg>
@@ -334,8 +334,8 @@ export default async function Footer() {
                 y2="1.20703"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#3E090A" />
-                <stop offset="1" stop-color="#D11F22" />
+                <stop stopColor="#3E090A" />
+                <stop offset="1" stopColor="#D11F22" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_94_48"
@@ -345,8 +345,8 @@ export default async function Footer() {
                 y2="25.707"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#3E090A" />
-                <stop offset="1" stop-color="#D11F22" />
+                <stop stopColor="#3E090A" />
+                <stop offset="1" stopColor="#D11F22" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_94_48"
@@ -356,8 +356,8 @@ export default async function Footer() {
                 y2="25.707"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D11F22" />
-                <stop offset="1" stop-color="#3E090A" />
+                <stop stopColor="#D11F22" />
+                <stop offset="1" stopColor="#3E090A" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_94_48"
@@ -367,8 +367,8 @@ export default async function Footer() {
                 y2="26.8081"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D11F22" />
-                <stop offset="1" stop-color="#3E090A" />
+                <stop stopColor="#D11F22" />
+                <stop offset="1" stopColor="#3E090A" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_94_48"
@@ -378,8 +378,8 @@ export default async function Footer() {
                 y2="1.06064"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#D11F22" />
-                <stop offset="1" stop-color="#3E090A" />
+                <stop stopColor="#D11F22" />
+                <stop offset="1" stopColor="#3E090A" />
               </linearGradient>
             </defs>
           </svg>

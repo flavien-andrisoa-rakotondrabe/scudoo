@@ -424,8 +424,8 @@ export default async function Ecosystem() {
                           y2="44"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#3E090A" />
-                          <stop offset="1" stop-color="#D11F22" />
+                          <stop stopColor="#3E090A" />
+                          <stop offset="1" stopColor="#D11F22" />
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_88_45"
@@ -435,8 +435,8 @@ export default async function Ecosystem() {
                           y2="5"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#3E090A" />
-                          <stop offset="1" stop-color="#D11F22" />
+                          <stop stopColor="#3E090A" />
+                          <stop offset="1" stopColor="#D11F22" />
                         </linearGradient>
                         <linearGradient
                           id="paint2_linear_88_45"
@@ -446,8 +446,8 @@ export default async function Ecosystem() {
                           y2="81.9998"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#3E090A" />
-                          <stop offset="1" stop-color="#D11F22" />
+                          <stop stopColor="#3E090A" />
+                          <stop offset="1" stopColor="#D11F22" />
                         </linearGradient>
                         <linearGradient
                           id="paint3_linear_88_45"
@@ -457,8 +457,8 @@ export default async function Ecosystem() {
                           y2="0.5"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#3E090A" />
-                          <stop offset="1" stop-color="#D11F22" />
+                          <stop stopColor="#3E090A" />
+                          <stop offset="1" stopColor="#D11F22" />
                         </linearGradient>
                         <linearGradient
                           id="paint4_linear_88_45"
@@ -468,8 +468,8 @@ export default async function Ecosystem() {
                           y2="0.5"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#D11F22" />
-                          <stop offset="1" stop-color="#3E090A" />
+                          <stop stopColor="#D11F22" />
+                          <stop offset="1" stopColor="#3E090A" />
                         </linearGradient>
                         <linearGradient
                           id="paint5_linear_88_45"
@@ -479,8 +479,8 @@ export default async function Ecosystem() {
                           y2="0.5"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#D11F22" />
-                          <stop offset="1" stop-color="#3E090A" />
+                          <stop stopColor="#D11F22" />
+                          <stop offset="1" stopColor="#3E090A" />
                         </linearGradient>
                         <linearGradient
                           id="paint6_linear_88_45"
@@ -490,8 +490,8 @@ export default async function Ecosystem() {
                           y2="50.5964"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#3E090A" />
-                          <stop offset="1" stop-color="#D11F22" />
+                          <stop stopColor="#3E090A" />
+                          <stop offset="1" stopColor="#D11F22" />
                         </linearGradient>
                         <linearGradient
                           id="paint7_linear_88_45"
@@ -501,8 +501,8 @@ export default async function Ecosystem() {
                           y2="0.5"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#D11F22" />
-                          <stop offset="1" stop-color="#3E090A" />
+                          <stop stopColor="#D11F22" />
+                          <stop offset="1" stopColor="#3E090A" />
                         </linearGradient>
                       </defs>
                     </svg>

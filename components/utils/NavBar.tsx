@@ -5,7 +5,7 @@ import Lang from "@/components/utils/Lang";
 import Button from "@/components/utils/Button";
 import Theme from "@/components/utils/Theme";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { HEADER_NAVIGATION } from "@/constants/navigation";
@@ -15,25 +15,46 @@ export default function NavBar() {
   const t = useTranslations("landing");
   const scrollDirection = useScrollDirection();
 
+  const isManualScrolling = useRef(false);
+
   const [isAtTop, setIsAtTop] = useState(true);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    // Header style (box-shadow)
     const handleScroll = () => {
       setIsAtTop(window.scrollY < 10);
     };
 
+    // Clic on menu
+    const handleHashChange = () => {
+      const currentHash = window.location.hash.replace("#", "");
+      if (currentHash) {
+        isManualScrolling.current = true;
+        setActiveSection(currentHash);
+
+        setTimeout(() => {
+          isManualScrolling.current = false;
+        }, 800);
+      }
+    };
+
+    // Intersection Observer
     const anchors = HEADER_NAVIGATION.map((item) =>
       t(`navigation.${item}.anchor`),
     );
 
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -70% 0px",
+      // Detect conflicts on 2 sections
+      rootMargin: "-40% 0px -40% 0px",
       threshold: 0,
     };
 
     const observer = new IntersectionObserver((entries) => {
+      // Scroll manually
+      if (isManualScrolling.current) return;
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
@@ -41,17 +62,27 @@ export default function NavBar() {
       });
     }, observerOptions);
 
+    // Section
     anchors.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
 
+    // Loading
+    if (window.location.hash) {
+      handleHashChange();
+    }
+
+    // Event Listeners
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", handleHashChange);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", handleHashChange);
       observer.disconnect();
     };
-  }, [t]);
+  }, [t, HEADER_NAVIGATION]);
 
   return (
     <header

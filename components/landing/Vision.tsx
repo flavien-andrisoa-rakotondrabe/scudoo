@@ -67,7 +67,7 @@ export default function Vision() {
   }, [api, index]);
 
   return (
-    <section id={t("navigation.vision.anchor")} className="py-36">
+    <section className="py-36">
       <div className="relative w-full flex items-center justify-center">
         <div className="absolute left-0">
           <svg
@@ -90,13 +90,16 @@ export default function Vision() {
                 y2="-27.4648"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#3E090A" />
-                <stop offset="1" stop-color="#D11F22" />
+                <stop stopColor="#3E090A" />
+                <stop offset="1" stopColor="#D11F22" />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <h1 className="max-w-3xl text-6xl font-semibold text-center">
+        <h1
+          id={t("navigation.vision.anchor")}
+          className="max-w-3xl text-6xl font-semibold text-center"
+        >
           Un{" "}
           <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
             écosystème
@@ -124,8 +127,8 @@ export default function Vision() {
                 y2="-27.4648"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#3E090A" />
-                <stop offset="1" stop-color="#D11F22" />
+                <stop stopColor="#3E090A" />
+                <stop offset="1" stopColor="#D11F22" />
               </linearGradient>
             </defs>
           </svg>

@@ -4,10 +4,11 @@ import Vision from "@/components/landing/Vision";
 import Ecosystem from "@/components/landing/Ecosystem";
 import Careers from "@/components/landing/Careers";
 import Footer from "@/components/landing/Footer";
+import ScrollTop from "@/components/utils/ScrollTop";
 
 export default function LandingPage() {
   return (
-    <div className="w-full min-h-screen">
+    <div className="relative w-full min-h-screen">
       <NavBar />
       <main>
         <Hero />
@@ -16,6 +17,7 @@ export default function LandingPage() {
         <Careers />
       </main>
       <Footer />
+      <ScrollTop />
     </div>
   );
 }
