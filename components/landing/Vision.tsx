@@ -67,7 +67,7 @@ export default function Vision() {
   }, [api, index]);
 
   return (
-    <section className="py-36">
+    <section className="py-16 md:py-36">
       <div className="relative w-full flex items-center justify-center">
         <div className="absolute left-0">
           <svg
@@ -76,6 +76,7 @@ export default function Vision() {
             height="356"
             viewBox="0 0 111 356"
             fill="none"
+            className="w-14 md:w-28 h-45 md:h-90"
           >
             <path
               d="M-1 1.72272L-1 353.348L110.409 177.535L-1 1.72272Z"
@@ -98,7 +99,7 @@ export default function Vision() {
         </div>
         <h1
           id={t("navigation.vision.anchor")}
-          className="max-w-3xl text-6xl font-semibold text-center"
+          className="z-10 max-w-xl md:max-w-3xl text-4xl md:text-6xl font-semibold text-center"
         >
           Un{" "}
           <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
@@ -113,6 +114,7 @@ export default function Vision() {
             height="356"
             viewBox="0 0 111 356"
             fill="none"
+            className="w-14 md:w-28 h-45 md:h-90"
           >
             <path
               d="M112 1.72272L112 353.348L0.59082 177.535L112 1.72272Z"
@@ -134,9 +136,9 @@ export default function Vision() {
           </svg>
         </div>
       </div>
-      <div className="relative w-full flex items-center justify-between gap-4 p-16">
+      <div className="relative w-full flex items-center justify-between gap-4 lg:gap-8 p-8 lg:p-16">
         <button
-          className="text-[#3e090a] cursor-pointer hover:opacity-80 trnasition disabled:opacity-50 disabled:cursor-default"
+          className="hidden lg:block cursor-pointer hover:opacity-80 trnasition disabled:opacity-50 disabled:cursor-default"
           onClick={() => api?.scrollPrev()}
         >
           <svg
@@ -153,7 +155,8 @@ export default function Vision() {
             />
           </svg>
         </button>
-        <div className="w-full flex flex-col items-center justify-center gap-8">
+
+        <div className="w-full lg:w-[calc(100%-8rem)] flex flex-col items-center justify-center lg:gap-8">
           <Carousel
             setApi={setApi}
             opts={{ align: "center", loop: true }}
@@ -163,7 +166,7 @@ export default function Vision() {
                 stopOnInteraction: false,
               }),
             ]}
-            className="relative max-w-270"
+            className="relative max-w-full"
           >
             <CarouselContent>
               {ECOSYSTEMS.map((item) => (
@@ -175,10 +178,10 @@ export default function Vision() {
                         background: `linear-gradient(to top, #000, transparent), center / cover url(${item.image})`,
                       }}
                     >
-                      <h2 className="text-[3rem] text-white font-semibold">
+                      <h2 className="text-4xl md:text-[3rem] text-white font-semibold">
                         {item.label}
                       </h2>
-                      <p className="max-w-2xl text-gray-100">
+                      <p className="max-w-sm md:max-w-2xl text-gray-100 text-sm md:text-md">
                         {item.description}
                       </p>
                     </div>
@@ -187,12 +190,8 @@ export default function Vision() {
               ))}
             </CarouselContent>
 
-            <div className="absolute -bottom-20 -right-20">
-              <Carousel
-                setApi={setApi}
-                // opts={{ align: "center", loop: true }}
-                className="max-w-sm"
-              >
+            <div className="absolute -bottom-20 -right-20 hidden lg:block">
+              <Carousel setApi={setApi} className="max-w-sm">
                 <CarouselContent>
                   {ECOSYSTEMS.map(
                     (item, index) =>
@@ -233,8 +232,9 @@ export default function Vision() {
             ))}
           </div>
         </div>
+
         <button
-          className="text-[#3e090a] cursor-pointer hover:opacity-80  trnasition disabled:opacity-50 disabled:cursor-default"
+          className="hidden lg:block cursor-pointer hover:opacity-80  trnasition disabled:opacity-50 disabled:cursor-default"
           onClick={() => api?.scrollNext()}
         >
           <svg

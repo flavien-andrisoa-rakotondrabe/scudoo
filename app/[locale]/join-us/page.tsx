@@ -8,9 +8,9 @@ export default function JoinUsPage() {
       <header>
         <Link
           href="/"
-          className="flex items-center px-2 md:px-20 py-2 md:py-10"
+          className="flex items-center flex-nowrap px-2 md:px-20 py-2 md:py-10"
         >
-          <div className="w-16 h-16 cursor-pointer">
+          <label className="w-16 h-16 cursor-pointer">
             <Image
               src="/mini-logo.png"
               alt="Logo"
@@ -18,8 +18,8 @@ export default function JoinUsPage() {
               height={64}
               className="w-full h-full"
             />
-          </div>
-          <span className="text-xl md:text-2xl">cudoo Holding</span>
+          </label>
+          <p className="text-xl md:text-2xl whitespace-nowrap">cudoo Holding</p>
         </Link>
       </header>
 

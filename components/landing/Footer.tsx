@@ -9,13 +9,14 @@ export default async function Footer() {
 
   return (
     <div className="py-8">
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center px-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1281"
           height="100"
           viewBox="0 0 1281 100"
           fill="none"
+          className="w-full max-w-7xl h-25"
         >
           <line
             x1="10.0009"
@@ -220,10 +221,10 @@ export default async function Footer() {
         </svg>
       </div>
 
-      <footer className="opacity-80 text-sm pt-16 px-20">
-        <div className="w-full flex gap-8 justify-between">
+      <footer className="opacity-80 text-sm pt-16 px-10 md:px-20">
+        <div className="w-full flex flex-col md:flex-row gap-8 justify-between">
           <div className="flex-1">
-            <div className="flex items-center">
+            <div className="flex flex-nowrap items-center">
               <div className="w-16 h-16">
                 <Image
                   src="/mini-logo.png"
@@ -233,7 +234,7 @@ export default async function Footer() {
                   className="w-full h-full"
                 />
               </div>
-              <span className="text-2xl">cudoo Holding</span>
+              <span className="text-2xl whitespace-nowrap">cudoo Holding</span>
             </div>
             <p className="max-w-xs mt-6 text-lg font-medium leading-6">
               Propulser l'innovation, structurer demain.
@@ -259,7 +260,7 @@ export default async function Footer() {
           <div className="flex-1">
             <h6 className="text-xl font-semibold">Ressources Stratégiques</h6>
             <p className="text-lg font-medium mt-6">Documentation</p>
-            <p className="mt-4">
+            <p className="mt-4 max-w-sm">
               Téléchargez notre plan de développement complet pour comprendre
               notre vision 2026.
             </p>
@@ -296,6 +297,7 @@ export default async function Footer() {
             height="31"
             viewBox="0 0 855 31"
             fill="none"
+            className="w-full"
           >
             <path
               d="M260 0.707031L595 0.707031"
@@ -384,7 +386,7 @@ export default async function Footer() {
             </defs>
           </svg>
 
-          <p className="text-sm text-center">
+          <p className="mt-4 md:text-sm text-center">
             © 2026 SCUDOO Holding. Tous droits réservés.
           </p>
         </div>

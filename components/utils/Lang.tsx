@@ -50,8 +50,8 @@ export default function Lang() {
     <Popover>
       <Tooltip>
         <TooltipTrigger asChild>
-          <PopoverTrigger>
-            <div className="w-8 h-8 rounded-full cursor-pointer">
+          <PopoverTrigger asChild>
+            <button className="hidden lg:block w-8 h-8 rounded-full cursor-pointer">
               <Image
                 src={`/locales/${locale}/flag.svg`}
                 alt={locale}
@@ -59,7 +59,7 @@ export default function Lang() {
                 height={32}
                 className="w-full h-full object-cover rounded-full select-none"
               />
-            </div>
+            </button>
           </PopoverTrigger>
         </TooltipTrigger>
         <TooltipContent>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Lang from "@/components/utils/Lang";
 import Button from "@/components/utils/Button";
 import Theme from "@/components/utils/Theme";
+import NavbarMobile from "@/components/utils/NavbarMobile";
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -87,13 +88,13 @@ export default function NavBar() {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full px-20 h-20 flex items-center justify-between bg-background transition",
+        "fixed top-0 z-50 w-full px-8 lg:px-20 h-20 flex items-center justify-between bg-background transition",
         scrollDirection === "down" ? "-translate-y-full" : "translate-y-0",
         !isAtTop && "shadow",
       )}
     >
-      <div className="flex items-center">
-        <div className="w-16 h-16">
+      <div className="flex flex-nowrap items-center">
+        <div className="w-12 h-12 lg:w-16 lg:h-16">
           <Image
             src="/mini-logo.png"
             alt="Logo"
@@ -102,9 +103,11 @@ export default function NavBar() {
             className="w-full h-full"
           />
         </div>
-        <span className="text-2xl">cudoo Holding</span>
+        <span className="text-xl lg:text-2xl whitespace-nowrap">
+          cudoo Holding
+        </span>
       </div>
-      <nav>
+      <nav className="hidden lg:block">
         <ul className="flex items-center gap-8">
           {HEADER_NAVIGATION.map((item) => {
             const anchor = t(`navigation.${item}.anchor`);
@@ -130,12 +133,14 @@ export default function NavBar() {
           })}
         </ul>
       </nav>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4 lg:gap-6">
         <div className="flex items-center gap-4">
           <Theme />
           <Lang />
         </div>
         <Button label={t("joinUs")} href="/join-us" />
+
+        <NavbarMobile activeSection={activeSection} />
       </div>
     </header>
   );

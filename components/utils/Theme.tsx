@@ -19,12 +19,12 @@ import {
 import { ThemeType } from "@/types/utils.type";
 import { updateUtilsReducer } from "@/redux/slices/utilsSlice";
 
-interface ThemeOptionInterface {
+export interface ThemeOptionInterface {
   tag: ThemeType;
   icon: ReactNode;
 }
 
-const THEMES: ThemeOptionInterface[] = [
+export const THEMES: ThemeOptionInterface[] = [
   {
     tag: "light",
     icon: (
@@ -119,7 +119,7 @@ export default function Theme() {
       <Tooltip>
         <TooltipTrigger asChild>
           <PopoverTrigger asChild>
-            <button className="w-8 h-8 flex justify-center items-center rounded-full cursor-pointer bg-gray-100 dark:bg-zinc-800 text-[#d11f22]">
+            <button className="w-8 h-8 hidden lg:flex justify-center items-center rounded-full cursor-pointer bg-gray-100 dark:bg-zinc-800 text-[#d11f22]">
               {actualTheme.icon}
             </button>
           </PopoverTrigger>
