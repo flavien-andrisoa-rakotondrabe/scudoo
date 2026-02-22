@@ -6,7 +6,10 @@ export default function JoinUsPage() {
   return (
     <>
       <header>
-        <Link href="/" className="flex items-center px-20 py-10">
+        <Link
+          href="/"
+          className="flex items-center px-2 md:px-20 py-2 md:py-10"
+        >
           <div className="w-16 h-16 cursor-pointer">
             <Image
               src="/mini-logo.png"
@@ -16,22 +19,22 @@ export default function JoinUsPage() {
               className="w-full h-full"
             />
           </div>
-          <span className="text-2xl">cudoo Holding</span>
+          <span className="text-xl md:text-2xl">cudoo Holding</span>
         </Link>
       </header>
 
-      <main className="relative flex flex-col justify-center items-center">
-        <h1 className="text-6xl font-semibold bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
+      <main className="relative mt-4 md:mt-0 flex flex-col justify-center items-center">
+        <h1 className="text-3xl md:text-6xl font-semibold bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
           Nous rejoindre
         </h1>
 
-        <section className="z-10 w-full p-20">
-          <div className="w-full p-16 bg-primary-background rounded-4xl">
+        <section className="z-10 w-full px-4 py-8 md:p-20">
+          <div className="w-full bg-primary-background rounded-2xl md:rounded-4xl">
             <JoinUs />
           </div>
         </section>
 
-        <div className="absolute top-0 w-125 h-125 bg-linear-to-r from-[#3e090a] to-[#d11f22] blur-[250px]"></div>
+        <div className="absolute top-0 w-full md:w-130 h-100 md:h-125 bg-linear-to-r from-[#3e090a] to-[#d11f22] blur-[250px]"></div>
       </main>
     </>
   );
