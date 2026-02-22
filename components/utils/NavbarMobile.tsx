@@ -86,13 +86,14 @@ export default function NavbarMobile({
       <Tooltip>
         <TooltipTrigger asChild>
           <SheetTrigger asChild>
-            <button className="w-10 h-10 flex lg:hidden justify-center items-center text-white rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer">
+            <button className="w-8 h-8 sm:w-10 sm:h-10 flex lg:hidden justify-center items-center text-white rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
+                className="size-4 sm:size-6"
               >
                 <path
                   d="M4.12402 7.12146H19.8728"
@@ -127,9 +128,9 @@ export default function NavbarMobile({
         <SheetHeader className="hidden"></SheetHeader>
         <div className="p-8 flex flex-col gap-10">
           <div className="w-full">
-            <h4 className="text-2xl font-semibold">Navigation</h4>
+            <h4 className="text-xl sm:text-2xl font-semibold">Navigation</h4>
             <nav className="mt-6">
-              <ul className="flex flex-col gap-6">
+              <ul className="flex flex-col gap-4 sm:gap-6">
                 {HEADER_NAVIGATION.map((item) => {
                   const anchor = t(`navigation.${item}.anchor`);
                   const isActive = activeSection === anchor;
@@ -139,7 +140,7 @@ export default function NavbarMobile({
                       <a
                         href={`#${anchor}`}
                         className={cn(
-                          "relative text-xl",
+                          "relative text-lg sm:text-xl",
                           isActive
                             ? "font-semibold px-1.5 bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent"
                             : "hover:text-[#d11f22]",
@@ -158,7 +159,7 @@ export default function NavbarMobile({
           </div>
 
           <div className="w-full">
-            <h4 className="text-2xl font-semibold">Thème</h4>
+            <h4 className="text-xl sm:text-2xl font-semibold">Thème</h4>
             <ul className="mt-6 w-full flex gap-4 select-none">
               {THEMES.map((item) => (
                 <li
@@ -179,7 +180,7 @@ export default function NavbarMobile({
           </div>
 
           <div className="w-full">
-            <h4 className="text-2xl font-semibold">Langues</h4>
+            <h4 className="text-xl sm:text-2xl font-semibold">Langues</h4>
             <ul className="mt-6 grid grid-cols-2 gap-4 select-none">
               {LOCALES.map((item) => (
                 <li
