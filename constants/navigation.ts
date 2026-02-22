@@ -1,6 +1,6 @@
 export const HEADER_NAVIGATION = [
   "home",
   "vision",
-  "ecosystem",
+  "platform",
   "careers",
 ] as const;

@@ -16,9 +16,9 @@
       "label": "Vision",
       "anchor": "vision"
     },
-    "ecosystem": {
-      "label": "Ecosystem",
-      "anchor": "ecosystem"
+    "platform": {
+      "label": "Platforms",
+      "anchor": "platforms"
     },
     "careers": {
       "label": "Careers",

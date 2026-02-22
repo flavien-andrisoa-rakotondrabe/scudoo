@@ -1,7 +1,7 @@
 import NavBar from "@/components/utils/NavBar";
 import Hero from "@/components/landing/Hero";
 import Vision from "@/components/landing/Vision";
-import Ecosystem from "@/components/landing/Ecosystem";
+import Platform from "@/components/landing/Platform";
 import Careers from "@/components/landing/Careers";
 import Footer from "@/components/landing/Footer";
 import ScrollTop from "@/components/utils/ScrollTop";
@@ -13,7 +13,7 @@ export default function LandingPage() {
       <main>
         <Hero />
         <Vision />
-        <Ecosystem />
+        <Platform />
         <Careers />
       </main>
       <Footer />

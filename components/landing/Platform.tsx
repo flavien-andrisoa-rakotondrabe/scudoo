@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { getLocale, getTranslations } from "next-intl/server";
 
-export default async function Ecosystem() {
+export default async function Platform() {
   const t = await getTranslations("landing");
   const locale = await getLocale();
 
@@ -177,18 +177,18 @@ export default async function Ecosystem() {
         </svg>
       </div>
 
-      <section
-        id={t("navigation.ecosystem.anchor")}
-        className="flex flex-col gap-40 px-20 py-44"
-      >
+      <section className="flex flex-col gap-36 px-20 py-40">
         <div className="w-full flex justify-center">
-          <h1 className="text-6xl font-semibold text-center">
+          <h2
+            id={t("navigation.platform.anchor")}
+            className="text-6xl font-semibold text-center py-4"
+          >
             Nos{" "}
             <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
               Plateformes
             </span>{" "}
             Digitales
-          </h1>
+          </h2>
         </div>
 
         <div className="flex flex-col gap-20">
