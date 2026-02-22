@@ -84,7 +84,7 @@ export default async function JoinUsPage() {
               className="w-full h-full"
             />
           </label>
-          <p className="text-2xl whitespace-nowrap">cudoo Holding</p>
+          <p className="text-xl sm:text-2xl whitespace-nowrap">cudoo Holding</p>
         </Link>
       </header>
 

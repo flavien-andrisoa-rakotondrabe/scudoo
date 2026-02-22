@@ -210,7 +210,7 @@ export default async function Platform() {
 
                 <div className="absolute bottom-4 right-4 md:relative flex-1 flex items-center justify-center">
                   {index % 2 === 0 && (
-                    <div className="hidden md:block">
+                    <div className="hidden md:block flex-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="325"
@@ -356,11 +356,11 @@ export default async function Platform() {
                       </svg>
                     </div>
                   )}
-                  <p className="w-25 h-25 min-w-25 min-h-25 flex justify-center items-center font-bold text-[3rem] bg-linear-to-r from-[#3e090a] to-[#d11f22] text-white rounded-full">
+                  <p className="w-25 h-25 flex justify-center items-center font-bold text-[3rem] bg-linear-to-r from-[#3e090a] to-[#d11f22] text-white rounded-full">
                     {index + 1}
                   </p>
                   {index % 2 !== 0 && (
-                    <div className="hidden md:block">
+                    <div className="hidden md:block flex-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="325"

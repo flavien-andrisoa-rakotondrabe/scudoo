@@ -23,7 +23,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const styles = cn(
-    "flex items-center justify-center gap-2 px-8 py-2 text-white font-semibold whitespace-nowrap rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90 disabled:opacity-80 disabled:pointer-events-none",
+    "flex items-center justify-center gap-2 px-8 h-9 text-white font-semibold whitespace-nowrap rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90 disabled:opacity-80 disabled:pointer-events-none",
     className,
   );
 

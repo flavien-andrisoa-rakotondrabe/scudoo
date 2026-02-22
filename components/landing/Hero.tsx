@@ -14,7 +14,7 @@ export default async function Hero() {
       <div className="min-h-0">
         <div className="h-full flex gap-8">
           <div className="w-full lg:w-[calc(50%-1.25rem)] h-full min-h-[calc(100vh-5rem)] md:min-h-auto p-8 md:p-16 lg:p-0 lg:ps-20 flex flex-col gap-10 bg-[linear-gradient(to_top,black,transparent,black),url('/main-hero.png')] bg-center bg-cover lg:bg-none">
-            <div className="flex-1 flex flex-col justify-center gap-10 text-background lg:text-foreground">
+            <div className="flex-1 flex flex-col justify-center gap-10 text-white lg:text-foreground">
               <h1 className="text-4xl sm:text-6xl font-semibold max-w-96 md:max-w-160">
                 {t("hero.title.1")}{" "}
                 <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">

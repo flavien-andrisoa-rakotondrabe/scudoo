@@ -86,7 +86,7 @@ export default function NavbarMobile({
       <Tooltip>
         <TooltipTrigger asChild>
           <SheetTrigger asChild>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 flex lg:hidden justify-center items-center text-white rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer">
+            <button className="w-9 h-9 sm:w-10 sm:h-10 flex lg:hidden justify-center items-center text-white rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -140,7 +140,7 @@ export default function NavbarMobile({
                       <a
                         href={`#${anchor}`}
                         className={cn(
-                          "relative text-lg sm:text-xl",
+                          "relative text-xl",
                           isActive
                             ? "font-semibold px-1.5 bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent"
                             : "hover:text-[#d11f22]",
