@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
-import { ComponentPropsWithoutRef, ComponentType, ElementType } from "react";
+import { ComponentPropsWithoutRef, ElementType } from "react";
+import { Spinner } from "@/components/ui/spinner";
 
 interface BaseProps {
   label: string;
@@ -17,11 +18,12 @@ export default function Button({
   className,
   href,
   onClick,
+  isLoading,
   icon: Icon,
   ...props
 }: ButtonProps) {
   const styles = cn(
-    "flex items-center justify-center gap-2 px-8 py-2 text-white font-semibold rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90",
+    "flex items-center justify-center gap-2 px-8 py-2 text-white font-semibold rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90 disabled:opacity-80 disabled:pointer-events-none",
     className,
   );
 
@@ -41,7 +43,13 @@ export default function Button({
   }
 
   return (
-    <button {...props} onClick={onClick} className={styles}>
+    <button
+      {...props}
+      disabled={isLoading}
+      onClick={onClick}
+      className={styles}
+    >
+      {isLoading && <Spinner className="size-6" />}
       {content}
     </button>
   );
