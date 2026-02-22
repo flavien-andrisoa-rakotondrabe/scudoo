@@ -171,11 +171,11 @@ export default async function Platform() {
       </div>
 
       <section className="flex flex-col gap-16 md:gap-36 px-10 md:px-20 py-20 md:py-40">
-        <div className="w-full flex justify-center">
-          <h2
-            id={t("navigation.platform.anchor")}
-            className="text-4xl md:text-6xl font-semibold text-center py-4"
-          >
+        <div
+          id={t("navigation.platform.anchor")}
+          className="w-full flex justify-center"
+        >
+          <h2 className="text-4xl md:text-6xl font-semibold text-center py-4">
             {t("platform.title.1")}{" "}
             <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
               {t("platform.title.2")}
