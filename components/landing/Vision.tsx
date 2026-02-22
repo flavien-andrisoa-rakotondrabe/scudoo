@@ -4,7 +4,7 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
 import { useEffect, useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import {
   Carousel,
   CarouselApi,
@@ -12,30 +12,26 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-const ECOSYSTEMS = [
-  {
-    label: "Innovation & Technologie",
-    description:
-      "Nous développons des systèmes évolutifs et sécurisés, allant du contrôle d'accès biométrique à la visioconférence en temps réel, pour redéfinir l'expérience utilisateur.",
-    image: "/innovation.jpg",
-  },
-  {
-    label: "Bien-être & E-Commerce",
-    description:
-      "À travers nos marques de cosmétiques et nos services d'abonnements, nous créons des ponts numériques entre les produits haut de gamme et les besoins des consommateurs.",
-    image: "/e-commerce.avif",
-  },
-  {
-    label: "Équipements de pointe",
-    description:
-      "Nous intégrons des technologies d'analyse corporelle et de visualisation 3D pour offrir des outils de précision aux professionnels du fitness.",
-    image: "/equipments.jpg",
-  },
-];
-
 export default function Vision() {
   const t = useTranslations("landing");
-  const { locale } = useLocale();
+
+  const ECOSYSTEMS = [
+    {
+      label: t("vision.items.1.title"),
+      description: t("vision.items.1.description"),
+      image: "/innovation.jpg",
+    },
+    {
+      label: t("vision.items.2.title"),
+      description: t("vision.items.2.description"),
+      image: "/e-commerce.avif",
+    },
+    {
+      label: t("vision.items.3.title"),
+      description: t("vision.items.3.description"),
+      image: "/equipments.jpg",
+    },
+  ];
 
   const index = 0;
 
@@ -101,11 +97,11 @@ export default function Vision() {
           id={t("navigation.vision.anchor")}
           className="z-10 max-w-xl md:max-w-3xl text-4xl md:text-6xl font-semibold text-center"
         >
-          Un{" "}
+          {t("vision.title.1")}{" "}
           <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
-            écosystème
+            {t("vision.title.2")}
           </span>{" "}
-          en pleine croissance
+          {t("vision.title.3")}
         </h1>
         <div className="absolute right-0">
           <svg

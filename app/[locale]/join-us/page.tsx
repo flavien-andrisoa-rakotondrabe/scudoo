@@ -2,7 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import JoinUs from "@/components/join-us/JoinUs";
 
-export default function JoinUsPage() {
+import { getTranslations } from "next-intl/server";
+
+export default async function JoinUsPage() {
+  const t = await getTranslations("joinUs");
+
   return (
     <>
       <header>
@@ -19,13 +23,16 @@ export default function JoinUsPage() {
               className="w-full h-full"
             />
           </label>
-          <p className="text-xl md:text-2xl whitespace-nowrap">cudoo Holding</p>
+          <p className="text-2xl whitespace-nowrap">cudoo Holding</p>
         </Link>
       </header>
 
       <main className="relative mt-4 md:mt-0 flex flex-col justify-center items-center">
-        <h1 className="text-3xl md:text-6xl font-semibold bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
-          Nous rejoindre
+        <h1 className="z-10 text-4xl md:text-6xl font-semibold">
+          {t("title.1")}{" "}
+          <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
+            {t("title.2")}
+          </span>
         </h1>
 
         <section className="z-10 w-full px-4 py-8 md:p-20">

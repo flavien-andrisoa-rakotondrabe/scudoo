@@ -237,12 +237,12 @@ export default async function Footer() {
               <span className="text-2xl whitespace-nowrap">cudoo Holding</span>
             </div>
             <p className="max-w-xs mt-6 text-lg font-medium leading-6">
-              Propulser l'innovation, structurer demain.
+              {t("footer.1.title")}
             </p>
           </div>
 
           <div className="flex-1">
-            <h6 className="text-xl font-semibold">Navigation rapide</h6>
+            <h6 className="text-xl font-semibold">{t("footer.2.title")}</h6>
             <ul className="mt-6 flex flex-col gap-2 list-disc list-inside">
               {HEADER_NAVIGATION.map((item) => (
                 <li key={`nav-${item}`} className="">
@@ -258,12 +258,9 @@ export default async function Footer() {
           </div>
 
           <div className="flex-1">
-            <h6 className="text-xl font-semibold">Ressources Stratégiques</h6>
-            <p className="text-lg font-medium mt-6">Documentation</p>
-            <p className="mt-4 max-w-sm">
-              Téléchargez notre plan de développement complet pour comprendre
-              notre vision 2026.
-            </p>
+            <h6 className="text-xl font-semibold">{t("footer.3.title")}</h6>
+            <p className="text-lg font-medium mt-6">{t("footer.3.subTitle")}</p>
+            <p className="mt-4 max-w-sm">{t("footer.3.description")}</p>
             <a
               href={`/locales/${locale}/plan.pdf`}
               download
@@ -285,7 +282,7 @@ export default async function Footer() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>{"Télécharger"}</span>
+              <span>{t("footer.3.button")}</span>
             </a>
           </div>
         </div>
@@ -386,9 +383,7 @@ export default async function Footer() {
             </defs>
           </svg>
 
-          <p className="mt-4 md:text-sm text-center">
-            © 2026 SCUDOO Holding. Tous droits réservés.
-          </p>
+          <p className="mt-4 md:text-sm text-center">{t("footer.copyright")}</p>
         </div>
       </footer>
     </div>

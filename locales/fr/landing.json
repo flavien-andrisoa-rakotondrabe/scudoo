@@ -24,5 +24,76 @@
       "label": "Carrières",
       "anchor": "carrieres"
     }
+  },
+  "hero": {
+    "title": {
+      "1": "Bâtir l'infrastructure du",
+      "2": "bien-être",
+      "3": "connecté"
+    },
+    "description": "SCUDOO Holding déploie des écosystèmes numériques à fort impact, unifiant fitness, santé et technologie. De la vision stratégique à l’excellence opérationnelle, nous concevons les plateformes qui redéfinissent les standards de l’industrie.",
+    "button": "Découvrir notre plan"
+  },
+  "vision": {
+    "title": {
+      "1": "Un",
+      "2": "écosystème",
+      "3": "en pleine croissance"
+    },
+    "items": {
+      "1": {
+        "title": "Innovation & Technologie",
+        "description": "Nous développons des systèmes évolutifs et sécurisés, allant du contrôle d'accès biométrique à la visioconférence en temps réel, pour redéfinir l'expérience utilisateur."
+      },
+      "2": {
+        "title": "Bien-être & E-Commerce",
+        "description": "À travers nos marques de cosmétiques et nos services d'abonnements, nous créons des ponts numériques entre les produits haut de gamme et les besoins des consommateurs"
+      },
+      "3": {
+        "title": "Équipements de pointe",
+        "description": "Nous intégrons des technologies d'analyse corporelle et de visualisation 3D pour offrir des outils de précision aux professionnels du fitness."
+      }
+    }
+  },
+  "platform": {
+    "title": {
+      "1": "Nos",
+      "2": "Plateformes",
+      "3": "Digitales"
+    },
+    "items": {
+      "1": {
+        "title": "SaaS & IoT",
+        "description": "Inscription en moins de 5 min, contrôle d'accès NFC/Biométrie, visioconférence WebRTC intégrée et suivi des données de santé."
+      },
+      "2": {
+        "title": "Abonnement & Automatisation",
+        "description": "Gestion des abonnements récurrents via Stripe, automatisation CRM, et système d'affiliation pour influenceurs."
+      },
+      "3": {
+        "title": "Expertise 3D",
+        "description": "Catalogue avec visualisation 3D interactive, intégration de scans corporels et outils de financement en ligne."
+      }
+    }
+  },
+  "careers": {
+    "title": "Rejoignez l’équipe SCUDOO",
+    "description": "Nous recherchons des bâtisseurs capables de concevoir des systèmes évolutifs, sécurisés et performants.",
+    "button": "Soumettre ma candidature"
+  },
+  "footer": {
+    "1": {
+      "title": "Propulser l'innovation, structurer demain."
+    },
+    "2": {
+      "title": "Navigation rapide"
+    },
+    "3": {
+      "title": "Ressources Stratégiques",
+      "subTitle": "Documentation",
+      "description": "Téléchargez notre plan de développement complet pour comprendre notre vision 2026.",
+      "button": "Télécharger"
+    },
+    "copyright": "© 2026 SCUDOO Holding. Tous droits réservés."
   }
 }

@@ -24,5 +24,76 @@
       "label": "Careers",
       "anchor": "careers"
     }
+  },
+  "hero": {
+    "title": {
+      "1": "Building the infrastructure for",
+      "2": "connected",
+      "3": "well-being"
+    },
+    "description": "SCUDOO Holding deploys high-impact digital ecosystems, unifying fitness, health, and technology. From strategic vision to operational excellence, we design platforms that redefine industry standards.",
+    "button": "Discover our plan"
+  },
+  "vision": {
+    "title": {
+      "1": "A",
+      "2": "growing",
+      "3": "ecosystem"
+    },
+    "items": {
+      "1": {
+        "title": "Innovation & Technology",
+        "description": "We develop scalable and secure systems, ranging from biometric access control to real-time videoconferencing, to redefine the user experience."
+      },
+      "2": {
+        "title": "Wellness & E-Commerce",
+        "description": "Through our cosmetics brands and subscription services, we build digital bridges between premium products and consumer needs."
+      },
+      "3": {
+        "title": "State-of-the-art equipment",
+        "description": "We integrate body analysis and 3D visualization technologies to provide precision tools for fitness professionals."
+      }
+    }
+  },
+  "platform": {
+    "title": {
+      "1": "Our",
+      "2": "Digital",
+      "3": "Platforms"
+    },
+    "items": {
+      "1": {
+        "title": "SaaS & IoT",
+        "description": "Sign up in less than 5 minutes, NFC/biometric access control, integrated WebRTC videoconferencing, and health data tracking."
+      },
+      "2": {
+        "title": "Subscription & Automation",
+        "description": "Recurring subscription management via Stripe, CRM automation, and affiliate system for influencers."
+      },
+      "3": {
+        "title": "3D expertise",
+        "description": "Catalog with interactive 3D visualization, integration of body scans, and online financing tools."
+      }
+    }
+  },
+  "careers": {
+    "title": "Join the SCUDOO team",
+    "description": "We are looking for builders capable of designing scalable, secure, and high-performance systems.",
+    "button": "Send application"
+  },
+  "footer": {
+    "1": {
+      "title": "Driving innovation, shaping tomorrow."
+    },
+    "2": {
+      "title": "Quick navigation"
+    },
+    "3": {
+      "title": "Strategic Resources",
+      "subTitle": "Documentation",
+      "description": "Get our full development plan to understand our vision for 2026.",
+      "button": "Download"
+    },
+    "copyright": "© 2026 SCUDOO Holding. All rights reserved."
   }
 }

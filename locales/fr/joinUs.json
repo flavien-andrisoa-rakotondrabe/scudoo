@@ -1,0 +1,35 @@
+{
+  "title": {
+    "1": "Nous",
+    "2": "rejoindre"
+  },
+  "form": {
+    "name": {
+      "label": "Nom",
+      "placeholder": "Votre Nom",
+      "requiredError": "Nom requis"
+    },
+    "firstname": {
+      "label": "Prénom(s)",
+      "placeholder": "Votre Prénom",
+      "requiredError": "Prénom requis"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Adresse e-mail",
+      "requiredError": "E-mail requis"
+    },
+    "cv": {
+      "label": "CV",
+      "placeholder": "Déposez votre CV ici ou cliquez pour sélectionner",
+      "fileType": "Format attendu : PDF",
+      "requiredError": "Fichier requis",
+      "formatError": "Format invalide. Fichier PDF seulement"
+    },
+    "button": "Envoyer"
+  },
+  "toast": {
+    "title": "Candidature envoyée",
+    "description": "Nous reviendrons vers vous."
+  }
+}

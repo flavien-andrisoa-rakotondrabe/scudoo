@@ -11,21 +11,27 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Field, FieldError, FieldGroup } from "@/components/ui/field";
-
-const formSchema = z.object({
-  name: z.string().trim().min(1, "Nom requis"),
-  firstname: z.string().trim().min(1, "Nom requis"),
-  email: z.email("Email requis"),
-  file: z
-    .instanceof(File, { message: "Fichier requis" })
-    .refine((file) => file.type === "application/pdf", "Format invalide"),
-});
-
-type FormInput = z.input<typeof formSchema>;
+import { useTranslations } from "next-intl";
 
 export default function JoinUs() {
+  const t = useTranslations("joinUs");
+
   const [file, setFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const formSchema = z.object({
+    name: z.string().trim().min(1, t("form.name.requiredError")),
+    firstname: z.string().trim().min(1, t("form.firstname.requiredError")),
+    email: z.email(t("form.email.requiredError")),
+    file: z
+      .instanceof(File, { message: t("form.cv.requiredError") })
+      .refine(
+        (file) => file.type === "application/pdf",
+        t("form.cv.formatError"),
+      ),
+  });
+
+  type FormInput = z.input<typeof formSchema>;
 
   const form = useForm<FormInput>({
     resolver: zodResolver(formSchema),
@@ -54,8 +60,8 @@ export default function JoinUs() {
       setIsLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      toast.success("Candidature envoyée", {
-        description: "Nous reviendrons vers vous.",
+      toast.success(t("form.toast.title"), {
+        description: t("form.toast.description"),
       });
 
       form.reset();
@@ -77,13 +83,13 @@ export default function JoinUs() {
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <Label htmlFor="name" className="text-md md:text-lg">
-                    Nom
+                    {t("form.name.label")}
                   </Label>
                   <Input
                     {...field}
                     id="name"
                     aria-invalid={fieldState.invalid}
-                    placeholder="Votre Nom"
+                    placeholder={t("form.name.placeholder")}
                     className="h-12"
                   />
                   {fieldState.invalid && (
@@ -99,13 +105,13 @@ export default function JoinUs() {
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <Label htmlFor="firstname" className="text-md md:text-lg">
-                    Prénom
+                    {t("form.firstname.label")}
                   </Label>
                   <Input
                     {...field}
                     id="firstname"
                     aria-invalid={fieldState.invalid}
-                    placeholder="Votre Prénom"
+                    placeholder={t("form.firstname.placeholder")}
                     className="h-12"
                   />
                   {fieldState.invalid && (
@@ -121,13 +127,13 @@ export default function JoinUs() {
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <Label htmlFor="email" className="text-md md:text-lg">
-                    E-mail
+                    {t("form.email.label")}
                   </Label>
                   <Input
                     {...field}
                     id="email"
                     aria-invalid={fieldState.invalid}
-                    placeholder="Adresse e-mail"
+                    placeholder={t("form.email.placeholder")}
                     className="h-12"
                   />
                   {fieldState.invalid && (
@@ -151,7 +157,9 @@ export default function JoinUs() {
                     onDrop={handleDrop}
                     onDragOver={(e) => e.preventDefault()}
                   >
-                    <span className="text-md md:text-lg">CV</span>
+                    <span className="text-md md:text-lg">
+                      {t("form.cv.label")}
+                    </span>
                     <p
                       className={cn(
                         "w-full h-48 p-4 flex flex-col gap-4 justify-center items-center rounded-xl cursor-pointer border-2 border-dashed",
@@ -245,8 +253,12 @@ export default function JoinUs() {
                         </p>
                       ) : (
                         <p className="text-center text-md md:text-lg text-neutral-400 max-w-md">
-                          Déposez votre CV ici ou cliquez pour sélectionner
-                          Fichier: PDF
+                          <span className="block">
+                            {t("form.cv.placeholder")}
+                          </span>
+                          <span className="block ">
+                            {t("form.cv.fileType")}
+                          </span>
                         </p>
                       )}
                     </p>
@@ -344,7 +356,7 @@ export default function JoinUs() {
           <div className="w-full max-w-2xl md:px-8 xl:px-16">
             <Button
               type="submit"
-              label={"Envoyer"}
+              label={t("form.button")}
               isLoading={isLoading}
               className="w-full py-2 md:py-3 text-lg md:text-xl"
             />

@@ -1,33 +1,26 @@
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 export default async function Platform() {
   const t = await getTranslations("landing");
-  const locale = await getLocale();
 
   const PLATFORMS = [
     {
-      label: "Gym",
+      label: t("platform.items.1.title"),
+      description: t("platform.items.1.description"),
       image: "/gym-system.jpg",
-      tag: "SaaS & IoT",
-      description:
-        "Inscription en moins de 5 min, contrôle d'accès NFC/Biométrie, visioconférence WebRTC intégrée et suivi des données de santé.",
     },
     {
-      label: "Plateforme E-Commerce",
+      label: t("platform.items.2.title"),
+      description: t("platform.items.2.description"),
       image: "/e-commerce-system.jpg",
-      tag: "Wellness & Subscription",
-      description:
-        "Gestion des abonnements récurrents via Stripe, automatisation CRM, et système d'affiliation pour influenceurs.",
     },
     {
-      label: "Retail Tech & Équipements",
+      label: t("platform.items.3.title"),
+      description: t("platform.items.3.description"),
       image: "/equipments-system.avif",
-      tag: "Expertise 3D",
-      description:
-        "Catalogue avec visualisation 3D interactive, intégration de scans corporels et outils de financement en ligne.",
     },
   ];
 
@@ -183,11 +176,11 @@ export default async function Platform() {
             id={t("navigation.platform.anchor")}
             className="text-4xl md:text-6xl font-semibold text-center py-4"
           >
-            Nos{" "}
+            {t("platform.title.1")}{" "}
             <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
-              Plateformes
+              {t("platform.title.2")}
             </span>{" "}
-            Digitales
+            {t("platform.title.3")}
           </h2>
         </div>
 
@@ -210,7 +203,7 @@ export default async function Platform() {
                       className="w-full h-full object-cover rounded-4xl"
                     />
                     <p className="absolute top-4 left-4 w-max py-2 px-6 rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] text-white font-semibold">
-                      {item.tag}
+                      {item.label}
                     </p>
                   </div>
                 </div>

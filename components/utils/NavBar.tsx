@@ -94,7 +94,7 @@ export default function NavBar() {
       )}
     >
       <div className="flex flex-nowrap items-center">
-        <div className="w-12 h-12 lg:w-16 lg:h-16">
+        <div className="w-16 h-16">
           <Image
             src="/mini-logo.png"
             alt="Logo"
@@ -103,9 +103,7 @@ export default function NavBar() {
             className="w-full h-full"
           />
         </div>
-        <span className="text-xl lg:text-2xl whitespace-nowrap">
-          cudoo Holding
-        </span>
+        <span className="text-2xl whitespace-nowrap">cudoo Holding</span>
       </div>
       <nav className="hidden lg:block">
         <ul className="flex items-center gap-8">

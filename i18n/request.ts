@@ -9,14 +9,16 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const safeLocale = isValidLocale ? (locale as string) : DEFAULT_LOCALE;
 
   try {
-    const [landing] = await Promise.all([
+    const [landing, joinUs] = await Promise.all([
       import(`../locales/${safeLocale}/landing.json`).then((m) => m.default),
+      import(`../locales/${safeLocale}/joinUs.json`).then((m) => m.default),
     ]);
 
     return {
       locale: safeLocale,
       messages: {
         landing,
+        joinUs,
       },
     };
   } catch (error) {

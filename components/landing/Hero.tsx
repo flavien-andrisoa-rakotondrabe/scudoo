@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { getLocale, getTranslations } from "next-intl/server";
-import { cn } from "@/lib/utils";
 
 export default async function Hero() {
   const t = await getTranslations("landing");
@@ -17,24 +16,21 @@ export default async function Hero() {
           <div className="w-full lg:w-[calc(50%-1.25rem)] h-full min-h-[calc(100vh-5rem)] md:min-h-auto p-8 md:p-16 lg:p-0 lg:ps-20 flex flex-col gap-10 bg-[linear-gradient(to_top,black,transparent,black),url('/main-hero.png')] bg-center bg-cover lg:bg-none">
             <div className="flex-1 flex flex-col justify-center gap-10 text-background lg:text-foreground">
               <h1 className="text-4xl sm:text-6xl font-semibold max-w-96 md:max-w-160">
-                Bâtir l'infrastructure du{" "}
+                {t("hero.title.1")}{" "}
                 <span className="bg-linear-to-r from-[#3e090a] to-[#d11f22] bg-clip-text text-transparent">
-                  bien-être
+                  {t("hero.title.2")}
                 </span>{" "}
-                connecté
+                {t("hero.title.3")}
               </h1>
               <p className="text-md sm:text-lg max-w-xl">
-                SCUDOO Holding déploie des écosystèmes numériques à fort impact,
-                unifiant fitness, santé et technologie. De la vision stratégique
-                à l’excellence opérationnelle, nous concevons les plateformes
-                qui redéfinissent les standards de l’industrie.
+                {t("hero.description")}
               </p>
               <a
                 href={`/locales/${locale}/plan.pdf`}
                 download
                 className="w-max flex items-center justify-center gap-2 px-8 sm:px-10 py-2 md:py-3 text-white font-semibold text-lg sm:text-xl rounded-full bg-linear-to-r from-[#3e090a] to-[#d11f22] cursor-pointer transition hover:opacity-90"
               >
-                {"Découvrir notre plan"}
+                {t("hero.button")}
               </a>
             </div>
 

@@ -1,0 +1,35 @@
+{
+  "title": {
+    "1": "Join",
+    "2": "Us"
+  },
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Your Name",
+      "requiredError": "Name required"
+    },
+    "firstname": {
+      "label": "FirstName",
+      "placeholder": "Your FirstName",
+      "requiredError": "FirstName required"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Email address",
+      "requiredError": "Email required"
+    },
+    "cv": {
+      "label": "CV",
+      "placeholder": "Submit your resume here or click to select",
+      "fileType": "Expected format: PDF",
+      "requiredError": "File required",
+      "formatError": "Invalid format. Accepted PDF only"
+    },
+    "button": "Submit"
+  },
+  "toast": {
+    "title": "Application submitted",
+    "description": "We will get back to you."
+  }
+}
