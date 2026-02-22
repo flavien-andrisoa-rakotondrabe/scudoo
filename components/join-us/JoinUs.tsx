@@ -60,8 +60,8 @@ export default function JoinUs() {
       setIsLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      toast.success(t("form.toast.title"), {
-        description: t("form.toast.description"),
+      toast.success(t("toast.title"), {
+        description: t("toast.description"),
       });
 
       form.reset();
@@ -358,7 +358,7 @@ export default function JoinUs() {
               type="submit"
               label={t("form.button")}
               isLoading={isLoading}
-              className="w-full py-2 md:py-3 text-lg md:text-xl"
+              className="w-full h-10 sm:h-12 text-lg md:text-xl"
             />
           </div>
 
