@@ -248,18 +248,18 @@ export default function JoinUs() {
                       )}
 
                       {file ? (
-                        <p className="text-center text-md md:text-lg text-neutral-500 max-w-md">
+                        <span className="text-center text-md md:text-lg text-neutral-500 max-w-md">
                           {file.name}
-                        </p>
+                        </span>
                       ) : (
-                        <p className="text-center text-md md:text-lg text-neutral-400 max-w-md">
+                        <span className="text-center text-md md:text-lg text-neutral-400 max-w-md">
                           <span className="block">
                             {t("form.cv.placeholder")}
                           </span>
                           <span className="block ">
                             {t("form.cv.fileType")}
                           </span>
-                        </p>
+                        </span>
                       )}
                     </p>
                   </Label>
@@ -313,8 +313,8 @@ export default function JoinUs() {
                   y2="29.5188"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_102_45"
@@ -324,8 +324,8 @@ export default function JoinUs() {
                   y2="5.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_102_45"
@@ -335,8 +335,8 @@ export default function JoinUs() {
                   y2="29"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint3_linear_102_45"
@@ -346,8 +346,8 @@ export default function JoinUs() {
                   y2="5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
               </defs>
             </svg>
@@ -395,8 +395,8 @@ export default function JoinUs() {
                   y2="31.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_102_46"
@@ -406,8 +406,8 @@ export default function JoinUs() {
                   y2="5.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_102_46"
@@ -417,8 +417,8 @@ export default function JoinUs() {
                   y2="5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
                 <linearGradient
                   id="paint3_linear_102_46"
@@ -428,8 +428,8 @@ export default function JoinUs() {
                   y2="31"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D11F22" />
-                  <stop offset="1" stop-color="#3E090A" />
+                  <stop stopColor="#D11F22" />
+                  <stop offset="1" stopColor="#3E090A" />
                 </linearGradient>
               </defs>
             </svg>

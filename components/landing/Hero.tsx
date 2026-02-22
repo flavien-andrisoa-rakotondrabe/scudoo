@@ -132,6 +132,7 @@ export default async function Hero() {
                 alt="Hero"
                 width={600}
                 height={600}
+                priority
                 className="w-full h-full rounded-l-[280px] object-cover"
               />
               <div className="w-80 h-42 absolute -bottom-21 right-12">

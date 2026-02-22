@@ -4,6 +4,67 @@ import JoinUs from "@/components/join-us/JoinUs";
 
 import { getTranslations } from "next-intl/server";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations("metadata");
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+
+  return {
+    // BASE
+    title: {
+      template: t("joinUs.title.template"),
+      default: t("joinUs.title.default"),
+    },
+    applicationName: "Scudoo Holding",
+    authors: [{ name: "Scudoo Holding", url: baseUrl }],
+    description: t("joinUs.description"),
+    keywords: t("joinUs.keywords").split(","),
+
+    // GOOGLE
+    alternates: {
+      canonical: `/${locale}/join-us`,
+      languages: {
+        "fr-FR": "/fr/join-us",
+        "en-US": "/en/join-us",
+        "x-default": "/en/join-us",
+      },
+    },
+
+    // Facebook, LinkedIn, Discord
+    openGraph: {
+      title: t("joinUs.title.default"),
+      description: t("joinUs.description"),
+      siteName: "Holding Team",
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+    },
+
+    // Twitter
+    twitter: {
+      card: "summary_large_image",
+      title: t("joinUs.title.default"),
+      description: t("joinUs.description"),
+      images: ["/mini-logo.png"],
+    },
+
+    // ROBOTS
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
+  };
+}
+
 export default async function JoinUsPage() {
   const t = await getTranslations("joinUs");
 

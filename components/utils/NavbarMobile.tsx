@@ -127,7 +127,7 @@ export default function NavbarMobile({
         <SheetHeader className="hidden"></SheetHeader>
         <div className="p-8 flex flex-col gap-10">
           <div className="w-full">
-            <h2 className="text-2xl font-semibold">Navigation</h2>
+            <h4 className="text-2xl font-semibold">Navigation</h4>
             <nav className="mt-6">
               <ul className="flex flex-col gap-6">
                 {HEADER_NAVIGATION.map((item) => {
@@ -158,7 +158,7 @@ export default function NavbarMobile({
           </div>
 
           <div className="w-full">
-            <h2 className="text-2xl font-semibold">Thème</h2>
+            <h4 className="text-2xl font-semibold">Thème</h4>
             <ul className="mt-6 w-full flex gap-4 select-none">
               {THEMES.map((item) => (
                 <li
@@ -179,7 +179,7 @@ export default function NavbarMobile({
           </div>
 
           <div className="w-full">
-            <h2 className="text-2xl font-semibold">Langues</h2>
+            <h4 className="text-2xl font-semibold">Langues</h4>
             <ul className="mt-6 grid grid-cols-2 gap-4 select-none">
               {LOCALES.map((item) => (
                 <li

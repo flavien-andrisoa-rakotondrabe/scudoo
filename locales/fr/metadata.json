@@ -1,0 +1,18 @@
+{
+  "landing": {
+    "title": {
+      "template": "%s | Scudoo Holding",
+      "default": "Scudoo Holding - Écosystème Fitness & Technologie"
+    },
+    "description": "Leader du bien-être connecté : Gym Management, E-commerce et Technologies biométriques.",
+    "keywords": "SaaS, Nextjs, AI, Fitness, Scudoo, Holding, Vision, Plateformes, Carrière"
+  },
+  "joinUs": {
+    "title": {
+      "template": "%s | Scudoo Holding",
+      "default": "Rejoignez l'Équipe Scudoo | Carrières & Innovation Fitness"
+    },
+    "description": "Développez l'avenir du bien-être connecté. Découvrez nos opportunités de carrière chez Scudoo Holding dans la tech, le fitness et le e-commerce.",
+    "keywords": "recrutement Scudoo, job fitness tech, carrière NestJS NextJS, emploi e-commerce, travailler chez Scudoo"
+  }
+}

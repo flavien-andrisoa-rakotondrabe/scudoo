@@ -11,6 +11,8 @@ import { getMessages } from "next-intl/server";
 
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+
 const baiJamjuree = Bai_Jamjuree({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -20,6 +22,7 @@ const baiJamjuree = Bai_Jamjuree({
 export const metadata: Metadata = {
   title: "Scudoo Holding",
   description: "Scudoo Holding",
+  metadataBase: new URL(baseUrl),
 };
 
 export default async function RootLayout({
